@@ -104,20 +104,24 @@ document.getElementById('agregarUsuario').addEventListener('click', () => {
     let monto = parseFloat(document.getElementById('monto').value);
     let cuotas = parseInt(document.getElementById('cuotas').value);
     let primerMes = document.getElementById('primerMes').value.trim();
-
+  
     // Validar que los campos no estén vacíos
     if (nombre === '' || apellido === '' || isNaN(monto) || isNaN(cuotas) || primerMes === '') {
-        // Mostrar un mensaje de error con Toastr
-        toastr.error('Por favor, complete todos los campos para agregar un usuario.');
-        return;
+      // Mostrar un mensaje de error con Toastr
+      toastr.error('Por favor, complete todos los campos para agregar un usuario.');
+      return;
     }
-
+  
     agregarUsuario(nombre, apellido, monto, cuotas, primerMes);
-
+  
+    // Mostrar un toaster verde con un mensaje de éxito
+    toastr.success('Usuario agregado correctamente.');
+  
     // Limpiar los valores de los campos de entrada
     document.getElementById('nombre').value = '';
     document.getElementById('apellido').value = '';
     document.getElementById('monto').value = '';
     document.getElementById('cuotas').value = '';
     document.getElementById('primerMes').value = '';
-});
+  });
+  

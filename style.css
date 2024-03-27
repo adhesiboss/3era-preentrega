@@ -15,9 +15,12 @@ body {
 
 
 .tabla-usuarios {
-    max-height: 500px; /* Altura máxima de la tabla */
-    overflow-y: auto; /* Scroll vertical */
-  }
-  .fs-inputs{
+    max-height: 500px;
+    /* Altura máxima de la tabla */
+    overflow-y: auto;
+    /* Scroll vertical */
+}
+
+.fs-inputs {
     font-size: 0.9rem;
-  }
+}
